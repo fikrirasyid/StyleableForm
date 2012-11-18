@@ -1,0 +1,31 @@
+.styleable-checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #EFEFEF;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px #CFCFCF;
+}
+.styleable-checkbox:hover {
+  box-shadow: inset 0 0 2px #999;
+}
+.styleable-checkbox:active {
+  background: #BFBFBF;
+}
+.styleable-checkbox.checked {
+  background: url(../images/sprites/checkbox-checked.png) #efefef;
+}
+.styleable-checkbox.checked:active {
+  background: url(../images/sprites/checkbox-checked.png) #bfbfbf;
+}
+
+body {
+  font: 14px 'Georgia', serif;
+  color: #444;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
