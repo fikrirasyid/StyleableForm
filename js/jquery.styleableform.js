@@ -37,4 +37,29 @@
 		});
 	}
 
+	// Do use value as placeholder
+	$.fn.styleableTextPlaceholder = function(){
+		$(this).each(function(){
+			var input = $(this);
+			if (input.is('input[type="text"]')){
+				// Creating Variables
+				var default_value = input.val();
+
+				// Placeholder behavior
+				input.on({
+					'focus' : function(){
+						if($(this).val() == default_value){
+							$(this).val('');
+						}
+					},
+					'blur' : function(){
+						if($(this).val() == ''){
+							$(this).val(default_value);
+						}						
+					}
+				});
+			}
+		});
+	}
+
 })(jQuery);
