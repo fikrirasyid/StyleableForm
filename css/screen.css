@@ -23,4 +23,29 @@
 body {
   font: 14px 'Georgia', serif;
   color: #444;
+  line-height: 1.6;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+.desc {
+  max-width: 750px;
+}
+
+input[type="text"] {
+  display: block;
+}
+
+pre {
+  background: #EFEFEF;
+  border: 1px dotted #CFCFCF;
+  padding: 10px;
+}
+
+.attention {
+  background: #f9f2bd;
+  padding: 10px 20px;
+  border: 1px dotted #c6a035;
 }

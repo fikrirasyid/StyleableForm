@@ -18,30 +18,64 @@
 
             // Heck Let's style dozen checkboxes in one hit
             $('.styled-checkbox').styleableCheckbox();
+
+            // Let's Make a more responsive text input placeholder
+            $('#text-4').styleableTextPlaceholder();
         });
     </script>
   </head>
   <body>
-    <form action="" method="post" id="styleable">
-        <h1>StyleableForm jQuery Plugin</h1>
-        <p><em>Developed by</em> <a href="http://twitter.com/fikrirasyid" title="Follow Fikri Rasyid on Twitter">@fikrirasyid</a></p>
-        <br><br>
+    <h1>StyleableForm jQuery Plugin</h1>
+    <p><em>Developed by</em> <a href="http://twitter.com/fikrirasyid" title="Follow Fikri Rasyid on Twitter">@fikrirasyid</a></p>
+
+    <form action="" method="post" id="styleable" class="desc">
         <h2>01. .styleableCheckbox() - Style checkbox easily</h2>
+        <p>Styling Checkboxes One by One Using Their IDs:</p>
+        <pre>$('#checkbox-1, #checkbox-2').styleableCheckbox();</pre>
         <p>
-            <label>Styling Checkboxes One by One Using Their IDs</label>
             <input type="checkbox" name="checkbox[]" id="checkbox-1" value="1">
             <input type="checkbox" name="checkbox[]" id="checkbox-2" value="2" checked="checked">
             <input type="checkbox" name="checkbox[]" id="checkbox-3" value="3">
             <input type="checkbox" name="checkbox[]" id="checkbox-4" value="4" checked="checked">
         </p>
 
+        <p>Styling Dozen of Checkboxes Using Their Class:</p>
+        <pre>$('.styled-checkbox').styleableCheckbox();</pre>
         <p>
-            <label>Styling Dozen of Checkboxes Using Their Class</label>
             <input type="checkbox" name="checkbox2[]" id="checkbox-5" class="styled-checkbox" value="1">
             <input type="checkbox" name="checkbox2[]" id="checkbox-6" class="styled-checkbox" value="2" checked="checked">
             <input type="checkbox" name="checkbox2[]" id="checkbox-7" class="styled-checkbox" value="3">
             <input type="checkbox" name="checkbox2[]" id="checkbox-8" class="styled-checkbox" value="4" checked="checked">
         </p>
+
+        <p class="attention"><strong>WARNING</strong>: the checkbox that want to be styled should have an <code>ID</code> for <code>.styleableCheckbox()</code> to work properly</p>
+
+        <h2>02. .styleableTextPlaceholder() - More responsive placeholder</h2>
+        <p><code>placeholder</code> attribute of <code>input[type="text"]</code> rocks, but it only dissapears after the actual information is being typed on the input field. This plugin use <code>value</code> attribute's value as 'placeholder' and removes it as soon as the cursor is being focused on the text input field </p>
+
+        <p>Example:</p>
+
+        <pre>$('#text-4').styleableTextPlaceholder();</pre>
+
+        <ol>
+            <li>
+                This is text input field, withouth default value: 
+                <input type="text" id="text-1" name="text-1">
+            </li>
+            <li>
+                This is text input field which uses placeholder. The <code>Default Value</code> dissapears after you start typing: 
+                <input type="text" id="text-2" name="text-2" placeholder="Default Value">                
+            </li>
+            <li>   
+                This is text input field which does not use <code>.styleableTextPlaceholder()</code>. The <code>Default Value</code> won't dissapear unless you select and remove it first: 
+                <input type="text" id="text-3" name="text-3" value="Default Value"> 
+            </li>
+            <li>
+                This is text input field which uses <code>.styleableTextPlaceholder()</code>. The <code>Default Value</code> dissapears right after the cursor is focused to the text input: 
+                <input type="text" id="text-4" name="text-4" value="Default Value"> 
+            </li>            
+        </ol>
+        <p class="attention">Make sure that you have included the <code>type="text"</code> attribute. It is required to make <code>.styleableTextPlaceholder()</code> works properly</p>
     </form>
   </body>
 </html>
